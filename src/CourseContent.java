@@ -1,5 +1,6 @@
 public class CourseContent implements Print{
     int created = 0;
+    int fileCreated = 0;
     CourseManagement courseManagement;
     public CourseContent(CourseManagement courseManagement) {
         this.courseManagement = courseManagement;
@@ -15,10 +16,10 @@ public class CourseContent implements Print{
     }
 
     public void files(){
-        if(created == 1)
+        if(created == 1 && fileCreated == 0) {
             System.out.println("File is installed.");
-        else
-            System.out.println("File cannot be installed. Integrate Course Content.");
+            fileCreated++;
+        }
     }
 
     private void data(){

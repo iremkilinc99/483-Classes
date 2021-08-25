@@ -4,6 +4,8 @@ public class TrackingProgress implements Print{
 
     public TrackingProgress(StudyProgramme studyProgramme) {
         this.studyProgramme = studyProgramme;
+        studyProgramme.print();
+        print();
     }
 
     @Override

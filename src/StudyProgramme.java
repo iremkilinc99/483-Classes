@@ -1,7 +1,7 @@
 public class StudyProgramme implements Print {
-    int created = 0;
+    static int created = 0;
+    ManagementUnit managementUnit;
 
-    ManagementUnit managementUnit = new ManagementUnit();
     public StudyProgramme (ManagementUnit managementUnit) {
         this.managementUnit = managementUnit;
     }
@@ -9,9 +9,7 @@ public class StudyProgramme implements Print {
     @Override
     public void print() {
         created++;
-        if(managementUnit.created == 1)
+        if(managementUnit.created == 1 && created == 1)
             System.out.println("Study Programme is added.");
-        else
-            System.out.println("Study Programme cannot be added. Add management unit.");
     }
 }

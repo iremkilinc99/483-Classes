@@ -3,6 +3,8 @@ public class Calendar implements Print{
     StudyProgramme studyProgramme;
     public Calendar(StudyProgramme studyProgramme) {
         this.studyProgramme = studyProgramme;
+        studyProgramme.print();
+        print();
     }
 
     @Override
